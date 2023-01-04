@@ -1,2 +1,12 @@
 
-hggggggggggggggggm
+<div class="container " >
+ <div class="col-4 titulo">
+  <input type="text" placeholder="ingresa nombre de la tareas" #tarea>
+  <br>
+  <textarea  *ngFor="let lista of listas " name="tareas" id="" cols="23" rows="7">{{lista}}</textarea>
+  <br>
+  <button class="btn btn-primary boton" (click)="addlista(tarea.value)">guardar</button>
+  
+ </div>
+     
+</div>
