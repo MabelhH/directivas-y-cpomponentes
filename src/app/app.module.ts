@@ -12,7 +12,8 @@ import { SesionesModule } from './sesiones/sesiones.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SesionesModule
+    SesionesModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,18 +1,11 @@
-.container{
-    height: 300px;
-    background-color: rgb(233, 244, 241);  
-}
-.lista{
-    margin-left:50px ;
-}
 
-textarea{
-    border-radius: 6px;
-    margin-left: 50px;
-
-}
 p{
-  margin-left: 70px;
-  font-size: 20px;  
+    font-size: 25px;
+    color: blue;
+    padding-left: 50px;
+}
+ul{
+    padding: 50px;
+    background-color: rgb(228, 209, 245);
     
 }

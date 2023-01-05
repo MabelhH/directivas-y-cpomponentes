@@ -1,12 +1,27 @@
-
-<div class="container " >
- <div class="col-4 titulo">
-  <input type="text" placeholder="ingresa nombre de la tareas" #tarea>
-  <br>
-  <textarea  *ngFor="let lista of listas " name="tareas" id="" cols="23" rows="7">{{lista}}</textarea>
-  <br>
-  <button class="btn btn-primary boton" (click)="addlista(tarea.value)">guardar</button>
+<div class="container-fluid">
+  <div class="formulario">
+    <form [formGroup]="formLogin">
   
- </div>
-     
+        <div class="my-5" >
+            <label for="nombre" >Nombre:</label>
+            <input type="text" id="nombre" formControlName="tarea" #tarea>
+            <span *ngIf="formLogin.get('tarea')?.invalid">ingrese  un nombre de 10 dijitos</span>
+        </div>
+        
+        <div class="my-5">
+            <label for="descript" >Descripcion:</label>
+            <input type="text" id="descript" formControlName="descripcion" #descript >
+            <span *ngIf="formLogin.get('descripcion')?.invalid">ingrese un descripcion corta</span>
+        </div>
+
+        <div>
+            <button [disabled]="formLogin.invalid" (click)="anadir(tarea.value, descript.value)">Enviar</button>
+        </div>
+    </form>
+  </div>
+  <br>
+  <div class="respuesta" >
+    {{formLogin.value | json}}
+  </div>
+  <br>
 </div>

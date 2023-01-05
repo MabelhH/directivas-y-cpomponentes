@@ -1,13 +1,5 @@
-<div class="container">
- <div class="row">
-   <div class="col-5">
-    <app-c3></app-c3>
-   </div>
-
-   <div class="col-5 lista"> 
-     <p clas="text-center">Lista de Tareas</p>
-     <textarea  name="tareas" id="" cols="23" rows="7"></textarea>
-   </div>
- </div>
-</div>
-
+<app-c3 (guardar)="addlista($event)"></app-c3>
+<p>lista de tareas</p>
+<ul *ngFor="let l of listas">
+  <li>{{l}}</li>
+</ul>
